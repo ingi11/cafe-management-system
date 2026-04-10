@@ -10,7 +10,7 @@
                 <p class="text-amber-900/60 text-sm font-medium">Manage your ingredients and track supplier costs.</p>
             </div>
             
-            {{-- Only Admin can see the 'Add' button - Updated to Espresso Theme --}}
+            {{-- Only Admin can see the 'Add' button --}}
             @if(auth()->user()->role == 'admin')
                 <a href="{{ route('admin.inventory.create') }}" 
                     class="bg-[#4a2c2a] hover:bg-[#2d1102] text-white px-6 py-3 rounded-xl font-black shadow-lg shadow-amber-900/10 transition-all transform hover:scale-105 inline-block uppercase text-xs tracking-widest">

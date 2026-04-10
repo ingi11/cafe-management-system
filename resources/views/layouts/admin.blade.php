@@ -6,11 +6,10 @@
     <title>Cafe Admin</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Softening the background even more for a cleaner look */
+        
         .cafe-body-bg {
             background: linear-gradient(135deg, #fffdfa 0%, #fcf5ed 100%);
         }
-        /* Custom scrollbar for a premium feel */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }

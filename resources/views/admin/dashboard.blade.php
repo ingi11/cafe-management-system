@@ -1,4 +1,4 @@
-@extends('layouts.admin') {{-- Ensure this matches your sidebar layout filename --}}
+@extends('layouts.admin')
 
 @section('content')
 <div class="container mx-auto">
@@ -40,7 +40,7 @@
     </div>
 
     <div class="bg-white p-6 rounded-xl shadow-sm border border-green-100">
-        <p class="text-xs text-green-600 uppercase font-bold">Today's Profit</p>
+        <p class="text-xs text-green-600 uppercase font-bold"> Profit</p>
         <h3 class="text-xl font-black text-green-600">${{ number_format($todayProfit, 2) }}</h3>
     </div>
 
@@ -189,12 +189,12 @@
                 labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
                 datasets: [{
                     label: 'Revenue ($)',
-                    data: {!! json_encode($weeklyRevenueData) !!}, // This would be your real data from the Controller
+                    data: {!! json_encode($weeklyRevenueData) !!}, 
                     // borderColor: 'rgb(79, 70, 229)',
                     tension: 0.4,
                     fill: true,
-                    borderColor: '#b45309', // A nice amber/gold for the line
-                    backgroundColor: 'rgba(180, 83, 9, 0.1)', // Light amber fill
+                    borderColor: '#b45309', 
+                    backgroundColor: 'rgba(180, 83, 9, 0.1)', 
                 }]
             },
             options: {

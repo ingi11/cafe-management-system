@@ -14,8 +14,7 @@ class Supplier extends Model
      */
     public function inventories(): HasMany
     {
-        // Make sure your Inventory model is named 'Inventory' 
-        // and that your inventories table has a 'supplier_id' column.
+        
         return $this->hasMany(Inventory::class);
     }
 }

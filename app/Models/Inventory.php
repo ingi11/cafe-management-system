@@ -12,8 +12,8 @@ class Inventory extends Model
         'unit', 
         'min_stock_level', 
         'category_id',
-        'supplier_id',  // Add this!
-        'cost_price'    // Add this!
+        'supplier_id',  
+        'cost_price'    
     ];
 public function category()
     {

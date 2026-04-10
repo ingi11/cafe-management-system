@@ -27,28 +27,7 @@ class CategoryController extends Controller
     return view('admin.categories.create', compact('categories'));
 }
 
-    // 3. Save the category to the database
-    // public function store(Request $request)
-    // {
-    //     $request->validate([
-    //         'name' => 'required|unique:categories|max:255',
-    //         'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-    //     ]);
-
-    //     $data = $request->all();
-        
-    //     // Auto-generate a slug for cleaner URLs
-    //     $data['slug'] = Str::slug($request->name);
-
-    //     // Handle Image Upload
-    //     if ($request->hasFile('image')) {
-    //         $data['image'] = $request->file('image')->store('categories', 'public');
-    //     }
-
-    //     Category::create($data);
-
-    //     return redirect()->route('admin.categories.index')->with('success', 'Category Created Successfully!');
-    // }
+    
     public function store(Request $request)
 {
     // 1. Validate the incoming data
@@ -111,7 +90,8 @@ public function destroy($id)
     $category = Category::findOrFail($id);
     $category->delete();
 
-    return redirect()->route('categories.index')->with('success', 'Category deleted!');
+    
+    return redirect()->route('admin.categories.index')->with('success', 'Category deleted!');
 }
 
     

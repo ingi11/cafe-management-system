@@ -13,12 +13,12 @@ class Product extends Model
     'price', 
     'category_id', 
     'image', 
-    'stock_quantity',   // ADD THIS
-    'alert_threshold',  // ADD THIS
-    'status',           // ADD THIS (so your deactivate button works)
-    'is_available'      // ADD THIS
+    'stock_quantity',   
+    'alert_threshold',  
+    'status',           
+    'is_available'      
 ];
-    // THIS IS THE CORRECT PLACE:
+
     public function recipes()
     {
         return $this->hasMany(Recipe::class);
@@ -28,21 +28,16 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
-    // app/Models/Product.php
-// app/Models/Product.php
+    
 public function orderItems(): HasMany
     {
         return $this->hasMany(OrderItem::class);
     }
 
-    /**
-     * Relationship to Category (Ensure this exists too!)
-     */
     
 public function inventory()
 {
-    // This tells Laravel: "Find the row in the inventories table 
-    // where 'item_name' matches this product's 'name'"
+   
     return $this->hasOne(Inventory::class, 'item_name', 'name');
 }
 

@@ -11,7 +11,7 @@ export default {
           light: '#fef9e8',
           medium: '#fff5ea',
           glass: '#fef1e0',
-          accent: '#d97706', // A nice coffee-brown/amber for buttons
+          accent: '#d97706', 
         },
       },
       backgroundImage: {

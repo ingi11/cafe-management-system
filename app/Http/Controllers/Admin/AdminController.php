@@ -111,7 +111,7 @@ public function index(Request $request)
         ->whereBetween('created_at', [$startDate, $endDate])
         ->latest()->take(5)->get();
 
-    // --- CHART DATA (Calculated here so it exists for everyone) ---
+    // --- CHART DATA 
     $weeklyRevenueData = [];
     $days = [];
 

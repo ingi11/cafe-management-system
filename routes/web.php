@@ -13,7 +13,7 @@ use App\Http\Controllers\Admin\SupplierController;
 
 
 
-// Change it to this:
+
 Route::get('/', function () {
     return view('welcome'); 
 });

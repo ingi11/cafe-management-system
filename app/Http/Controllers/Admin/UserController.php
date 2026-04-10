@@ -45,7 +45,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        // Validation: sometimes() ensures we only check these if they are present in the form
+
         $request->validate([
             'name' => 'sometimes|required|string|max:255',
             'role' => 'required|in:admin,cashier',
